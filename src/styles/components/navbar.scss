@@ -1,0 +1,62 @@
+@import '../globals.scss';
+
+.navbar {
+  height: 5vh;
+  width: 80%;
+  background-color: $white;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3vh;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .navbar-left {
+    .navbar-logo {
+      img {
+        max-height: 4vh;
+      }
+    }
+  }
+
+  .navbar-right {
+    width: 50%;
+
+    .navbar-menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .navbar-menu-item {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $black;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        list-style: none;
+        text-transform: uppercase;
+        padding: 5px 20px 5px 20px;
+        border-radius: 30px;
+
+        &:hover {
+          background-color: $green;
+        }
+
+        .navbar-menu-link {
+          text-decoration: none;
+          color: $black;
+          transition: .3s;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

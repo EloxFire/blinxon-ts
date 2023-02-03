@@ -1,0 +1,12 @@
+@import '../globals.scss';
+
+#home {
+  .header {
+    height: 60vh;
+    background-image: url('../../img/header_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $white;
+  }
+}

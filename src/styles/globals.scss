@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Espera';
+  src: url('../fonts/Espera-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Espera';
+  src: url('../fonts/Espera-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Espera';
+  src: url('../fonts/Espera-Italic.ttf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Espera';
+  src: url('../fonts/Espera-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+$white: #FFFFFF;
+$black: #000000;
+$green: #147433;
+$red: #EB4F4F;
+
+* {
+  box-sizing: border-box;
+  font-family: 'Espera';
+}
