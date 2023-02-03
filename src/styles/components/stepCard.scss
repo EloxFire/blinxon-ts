@@ -1,0 +1,71 @@
+@import '../globals.scss';
+
+.step-card {
+  background-color: $white;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid $green;
+  width: 30%;
+
+  .card-title {
+    font-size: 2rem;
+    color: $black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .start,
+  .end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-size: 1.5rem;
+      color: $black;
+      margin: 0;
+    }
+
+    .date {
+      font-size: 1.5rem;
+      color: $black;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+
+    .step-distance,
+    .total-distance {
+      .title {
+        font-size: 1.5rem;
+        color: $black;
+        margin: 0;
+      }
+
+      .value {
+        font-size: 1.5rem;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+  }
+}

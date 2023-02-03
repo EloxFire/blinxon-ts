@@ -6,7 +6,7 @@ import './styles/globals.scss'
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar active={0} />
       <Switch>
         <Route path="/" element={<Home />} />
       </Switch>
