@@ -8,6 +8,13 @@
   width: 30%;
   min-height: 30vh;
   height: auto;
+  margin-right: 5vw;
+
+  @media only screen and (max-width: $mobileBreakpoint) {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
 
   .card-title {
     font-size: 2rem;
@@ -16,6 +23,10 @@
     font-weight: bold;
     margin: 0;
     margin-bottom: 10px;
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      font-size: 1.5rem;
+    }
   }
 
 
@@ -29,6 +40,10 @@
       font-size: 1.5rem;
       color: $black;
       margin: 0;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        font-size: 1.2rem;
+      }
     }
 
     .date {
@@ -37,6 +52,10 @@
       text-transform: uppercase;
       font-weight: bold;
       margin: 0;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        font-size: 1rem;
+      }
     }
   }
 
@@ -85,6 +104,10 @@
           font-size: 1.2rem;
           color: $black;
           margin: 0;
+
+          @media only screen and (max-width: $mobileBreakpoint) {
+            font-size: 1rem;
+          }
         }
 
         .value {
@@ -93,6 +116,10 @@
           text-transform: uppercase;
           font-weight: bold;
           margin: 0;
+
+          @media only screen and (max-width: $mobileBreakpoint) {
+            font-size: .8rem;
+          }
         }
       }
     }

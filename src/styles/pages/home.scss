@@ -11,6 +11,10 @@
     position: relative;
     z-index: 0;
 
+    @media only screen and (max-width: $mobileBreakpoint) {
+      background-position: calc(50% + 50px) 50%;
+    }
+
     .title-container {
       position: absolute;
       bottom: 50px;
@@ -20,12 +24,22 @@
       padding-right: 20px;
       border-radius: 20px;
 
+      @media only screen and (max-width: $mobileBreakpoint) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       h1 {
         font-size: 6rem;
         color: $white;
         margin: 0;
         text-transform: uppercase;
         font-weight: bold;
+
+        @media only screen and (max-width: $mobileBreakpoint) {
+          font-size: 4rem;
+          text-align: center;
+        }
       }
 
       h2 {
@@ -38,6 +52,13 @@
         letter-spacing: 2px;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 2px;
+
+        @media only screen and (max-width: $mobileBreakpoint) {
+          font-size: 1.8rem;
+          text-align: center;
+          -webkit-text-stroke: 1px;
+          margin-top: 0px
+        }
       }
     }
   }
@@ -50,15 +71,24 @@
       color: $black;
       text-transform: uppercase;
       font-weight: bold;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        font-size: 1.5rem;
+        text-align: center;
+      }
     }
 
     .cards-container {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       margin-top: 50px;
       margin-bottom: 50px;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -73,19 +103,32 @@
       color: $black;
       text-transform: uppercase;
       font-weight: bold;
+      margin-bottom: 50px;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        font-size: 1.5rem;
+        text-align: center;
+      }
     }
 
-    .actus-container {
+    .scroll-handle {
+      // background-color: red;
       display: flex;
       flex-direction: row;
-      align-items: space-between;
-      margin-top: 50px;
-      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      // background-color: grey;
+      padding: 10px;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
 
       .left-arrow-container,
       .right-arrow-container {
         position: relative;
-        width: 10%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -96,9 +139,16 @@
           background-color: rgba($black, .02);
         }
       }
+    }
+
+    .actus-container {
+      display: flex;
+      flex-direction: row;
+      align-items: space-between;
+      width: 100%;
 
       .posts-container {
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: row;
         overflow-x: auto;

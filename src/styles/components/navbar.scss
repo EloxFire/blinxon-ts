@@ -17,9 +17,18 @@
   z-index: 2;
   // transition: .3s;
 
+  @media only screen and (max-width: $mobileBreakpoint) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .navbar-left {
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      width: 20%;
+    }
 
     .navbar-logo {
       img {
@@ -31,11 +40,19 @@
   .navbar-right {
     width: 60%;
 
+    @media only screen and (max-width: $mobileBreakpoint) {
+      width: 80%;
+    }
+
     .navbar-menu {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        justify-content: flex-end;
+      }
 
       .navbar-menu-item {
         font-size: 1.2rem;
@@ -69,11 +86,12 @@
 .active {
   background-color: $green;
 
-  &.navbar-menu-link {
+  .navbar-menu-link {
     color: $white !important;
   }
 }
 
 .navbar-active {
-  border: 2px solid $green;
+  outline: 2px solid $green;
+
 }

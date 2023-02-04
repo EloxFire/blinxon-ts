@@ -4,7 +4,7 @@ import { colors, news, tripSteps } from '../scripts/utils'
 import StepCard from '../components/StepCard'
 import '../styles/pages/home.scss'
 import moment from 'moment'
-import { Sentry } from 'react-activity'
+// import { Sentry } from 'react-activity'
 import "react-activity/dist/Sentry.css";
 import { InstagramEmbed } from 'react-social-media-embed'
 
@@ -40,12 +40,7 @@ export default function Home() {
         </div>
       </div>
       <div className="direct">
-        {/* <h1><Icon.FaCircle className="direct-dot-animated" style={{ color: colors.red, verticalAlign: "middle" }} /> Notre aventure en direct</h1> */}
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', position: 'relative' }}>
-          <Sentry animating color={colors.red} size={25} speed={.3} style={{ transform: 'translateX(-25%)' }} />
-          <div style={{ width: '25px', height: '25px', backgroundColor: colors.red, position: "absolute", borderRadius: '50%' }}></div>
-          <h1>Notre aventure en direct</h1>
-        </div>
+        <h1><Icon.FaCircle className="direct-dot-animated" style={{ color: colors.red, verticalAlign: "middle" }} /> Notre aventure en direct</h1>
         <div className="cards-container">
           <StepCard
             stepIcon={<Icon.FaMapPin style={{ color: colors.green, verticalAlign: 'middle' }} />}
@@ -87,18 +82,24 @@ export default function Home() {
             })
           } */}
 
-          <a href='/' className="step-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '25vh', textDecoration: 'none', color: colors.black }}>
+          {/* <a href='/' className="step-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '25vh', textDecoration: 'none', color: colors.black }}>
             <p className="card-title">Voir le détail</p>
             <p><Icon.FaSearchPlus style={{ fontSize: '2rem' }} /></p>
-          </a>
+          </a> */}
         </div>
       </div>
       <div className="content">
         <h1><Icon.FaRegNewspaper style={{ color: colors.green, verticalAlign: "middle" }} /> Nos dernières actualités</h1>
-        <div className="actus-container">
+        <div className="scroll-handle">
           <div onClick={() => handleManualScroll('left')} className="left-arrow-container">
-            <Icon.FaChevronLeft style={{ fontSize: '4rem' }} />
+            <Icon.FaChevronLeft style={{ fontSize: '2.5rem' }} />
           </div>
+          <div onClick={() => handleManualScroll('right')} className='right-arrow-container'>
+            <Icon.FaChevronRight style={{ fontSize: '2.5rem' }} />
+          </div>
+        </div>
+        <div className="actus-container">
+
           <div id="news-posts-container" className='posts-container'>
             {
               news.map((actu, index) => {
@@ -109,9 +110,6 @@ export default function Home() {
                 )
               })
             }
-          </div>
-          <div onClick={() => handleManualScroll('right')} className='right-arrow-container'>
-            <Icon.FaChevronRight style={{ fontSize: '4rem' }} />
           </div>
         </div>
       </div>

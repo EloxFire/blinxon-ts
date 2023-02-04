@@ -32,7 +32,7 @@ export default function Navbar({ active }: NavbarProps) {
           <li className={`navbar-menu-item ${active === 0 && "active"}`}>
             <a href="/" className="navbar-menu-link">Accueil</a>
           </li>
-          <li className={`navbar-menu-item ${active === 1 && "active"}`}>
+          {/* <li className={`navbar-menu-item ${active === 1 && "active"}`}>
             <a href="/about" className="navbar-menu-link">À propos</a>
           </li>
           <li className={`navbar-menu-item ${active === 2 && "active"}`}>
@@ -43,7 +43,7 @@ export default function Navbar({ active }: NavbarProps) {
           </li>
           <li className={`navbar-menu-item ${active === 4 && "active"}`}>
             <a href="/contact" className="navbar-menu-link">Contact</a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
