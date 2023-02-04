@@ -7,6 +7,15 @@ export const colors = {
 
 export const tripSteps: { title: string, date: Date, endDate: Date, startPlace: string, endPlace: string, stepDistance: number, totalDistance: number }[] = [
   {
+    title: 'Préparation finale',
+    date: new Date('2023-02-01T08:00:00'),
+    endDate: new Date('2023-02-14T08:00:00'),
+    startPlace: "Aix en Provence",
+    endPlace: "Aix en Provence",
+    stepDistance: 0,
+    totalDistance: 0,
+  },
+  {
     title: 'Pré-départ',
     date: new Date('2023-02-14T08:00:00'),
     endDate: new Date('2023-02-14T17:00:00'),
