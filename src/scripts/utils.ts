@@ -160,3 +160,13 @@ export const tripSteps: { title: string, date: Date, endDate: Date, startPlace: 
     totalDistance: 6162.9,
   }
 ]
+
+export const news: string[] = [
+  "https://www.instagram.com/p/CoMqFhuNikS/?utm_source=ig_web_copy_link",
+  "https://www.instagram.com/p/CoKcKnXtmby/?utm_source=ig_web_copy_link",
+  "https://www.instagram.com/p/CoEvqHTtR-P/?utm_source=ig_web_copy_link",
+  "https://www.instagram.com/p/Cn7IvdNNq0Z/?utm_source=ig_web_copy_link",
+  "https://www.instagram.com/p/Cn2QTOqNQ6_/?utm_source=ig_web_copy_link",
+  "https://www.instagram.com/p/CnzviufLFtp/?utm_source=ig_web_copy_link",
+  "https://www.instagram.com/p/CnmlEctIEe8/?utm_source=ig_web_copy_link",
+]

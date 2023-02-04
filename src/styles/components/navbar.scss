@@ -15,8 +15,12 @@
   padding-left: 50px;
   padding-right: 50px;
   z-index: 2;
+  // transition: .3s;
 
   .navbar-left {
+    display: flex;
+    flex-direction: column;
+
     .navbar-logo {
       img {
         max-height: 4vh;
@@ -68,4 +72,8 @@
   &.navbar-menu-link {
     color: $white !important;
   }
+}
+
+.navbar-active {
+  border: 2px solid $green;
 }

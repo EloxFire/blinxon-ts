@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import * as Icon from 'react-icons/fa'
-import { colors, tripSteps } from '../scripts/utils'
+import { colors, news, tripSteps } from '../scripts/utils'
 import StepCard from '../components/StepCard'
 import '../styles/pages/home.scss'
 import moment from 'moment'
 import { Sentry } from 'react-activity'
 import "react-activity/dist/Sentry.css";
+import { InstagramEmbed } from 'react-social-media-embed'
 
 export default function Home() {
 
@@ -18,6 +19,17 @@ export default function Home() {
     setSteps(accurateSteps)
 
   }, [])
+
+  const handleManualScroll = (direction: 'left' | 'right') => {
+    const container = document.getElementById('news-posts-container')
+    if (container) {
+      if (direction === 'left') {
+        container.scrollLeft -= 800
+      } else {
+        container.scrollLeft += 800
+      }
+    }
+  }
 
   return (
     <div id="home">
@@ -83,6 +95,25 @@ export default function Home() {
       </div>
       <div className="content">
         <h1><Icon.FaRegNewspaper style={{ color: colors.green, verticalAlign: "middle" }} /> Nos dernières actualités</h1>
+        <div className="actus-container">
+          <div onClick={() => handleManualScroll('left')} className="left-arrow-container">
+            <Icon.FaChevronLeft style={{ fontSize: '4rem' }} />
+          </div>
+          <div id="news-posts-container" className='posts-container'>
+            {
+              news.map((actu, index) => {
+                return (
+                  <div style={{ width: '328px', marginRight: '3vw' }}>
+                    <InstagramEmbed key={`insta-news-${index}`} url={actu} linkText="Voir sur Instagram" />
+                  </div>
+                )
+              })
+            }
+          </div>
+          <div onClick={() => handleManualScroll('right')} className='right-arrow-container'>
+            <Icon.FaChevronRight style={{ fontSize: '4rem' }} />
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
-import '../styles/components/navbar.scss'
+import { useEffect } from 'react'
 import blinxon_logo from '../img/logo_blinxon.svg'
+import '../styles/components/navbar.scss'
 
 interface NavbarProps {
   active: number
@@ -7,8 +8,20 @@ interface NavbarProps {
 
 export default function Navbar({ active }: NavbarProps) {
 
+  // Add small border around navbar on page scroll
+  useEffect(() => {
+    const navbar = document.getElementById('navbar')
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        navbar?.classList.add('navbar-active')
+      } else {
+        navbar?.classList.remove('navbar-active')
+      }
+    })
+  }, [])
+
   return (
-    <nav className="navbar">
+    <nav id="navbar" className="navbar">
       <div className="navbar-left">
         <a href="/" className="navbar-logo">
           <img src={blinxon_logo} alt="Logo de l'association Blinxon" />
