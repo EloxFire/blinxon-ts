@@ -4,6 +4,8 @@ import { colors, tripSteps } from '../scripts/utils'
 import StepCard from '../components/StepCard'
 import '../styles/pages/home.scss'
 import moment from 'moment'
+import { Sentry } from 'react-activity'
+import "react-activity/dist/Sentry.css";
 
 export default function Home() {
 
@@ -25,8 +27,13 @@ export default function Home() {
           <h2>4L trophy 2023</h2>
         </div>
       </div>
-      <div className="content">
-        <h1><Icon.FaCircle style={{ color: colors.red, verticalAlign: "middle" }} /> Notre aventure en direct</h1>
+      <div className="direct">
+        {/* <h1><Icon.FaCircle className="direct-dot-animated" style={{ color: colors.red, verticalAlign: "middle" }} /> Notre aventure en direct</h1> */}
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', position: 'relative' }}>
+          <Sentry animating color={colors.red} size={25} speed={.3} style={{ transform: 'translateX(-25%)' }} />
+          <div style={{ width: '25px', height: '25px', backgroundColor: colors.red, position: "absolute", borderRadius: '50%' }}></div>
+          <h1>Notre aventure en direct</h1>
+        </div>
         <div className="cards-container">
           <StepCard
             stepIcon={<Icon.FaMapPin style={{ color: colors.green, verticalAlign: 'middle' }} />}
@@ -73,6 +80,9 @@ export default function Home() {
             <p><Icon.FaSearchPlus style={{ fontSize: '2rem' }} /></p>
           </a>
         </div>
+      </div>
+      <div className="content">
+        <h1><Icon.FaRegNewspaper style={{ color: colors.green, verticalAlign: "middle" }} /> Nos dernières actualités</h1>
       </div>
     </div>
   )
