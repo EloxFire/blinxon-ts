@@ -11,7 +11,7 @@ export default function Footer() {
           <img src={blinxon_logo_white} alt="Logo blanc de l'association Blinxon " />
         </div>
         <div className="right">
-          <p>Association de loi 1901 BLINXON</p>
+          <p>BLINXON - Association de loi 1901</p>
           <p>Siège social : 36 rue Mignet, 13100 Aix en Provence</p>
           <p>Numéro RNA : W131016311</p>
 
