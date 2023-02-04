@@ -2,18 +2,21 @@ import { useEffect, useState } from 'react'
 import * as Icon from 'react-icons/fa'
 import { colors, news, tripSteps } from '../scripts/utils'
 import StepCard from '../components/StepCard'
-import '../styles/pages/home.scss'
-import moment from 'moment'
-// import { Sentry } from 'react-activity'
-import "react-activity/dist/Sentry.css";
 import { InstagramEmbed } from 'react-social-media-embed'
-import { log } from 'console'
+import "react-activity/dist/Sentry.css";
+import '../styles/pages/home.scss'
 
-export default function Home() {
+
+interface HomeProps {
+  changeActive: (active: number) => void
+}
+
+export default function Home({ changeActive }: HomeProps) {
 
   const [steps, setSteps] = useState<{ type: 'activity' | 'travel' | 'info', title: string, date: Date, endDate: Date, place: string, endPlace?: string, distance?: number, totalDistance?: number }[]>([])
 
   useEffect(() => {
+    changeActive(0)
     const tempSteps = tripSteps
     const accurateSteps = tempSteps.filter(step => step.endDate >= new Date())
     setSteps(accurateSteps)
