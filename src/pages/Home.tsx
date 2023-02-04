@@ -7,16 +7,17 @@ import moment from 'moment'
 // import { Sentry } from 'react-activity'
 import "react-activity/dist/Sentry.css";
 import { InstagramEmbed } from 'react-social-media-embed'
+import { log } from 'console'
 
 export default function Home() {
 
-  const [steps, setSteps] = useState<{ title: string, date: Date, endDate: Date, startPlace: string, endPlace: string, stepDistance: number, totalDistance: number }[]>([])
+  const [steps, setSteps] = useState<{ type: 'activity' | 'travel' | 'info', title: string, date: Date, endDate: Date, place: string, endPlace?: string, distance?: number, totalDistance?: number }[]>([])
 
   useEffect(() => {
     const tempSteps = tripSteps
-    const accurateSteps = tempSteps.filter(step => step.date >= new Date() || step.endDate >= new Date())
-    // const accurateSteps = tempSteps
+    const accurateSteps = tempSteps.filter(step => step.endDate >= new Date())
     setSteps(accurateSteps)
+    console.log(accurateSteps);
 
   }, [])
 
@@ -41,8 +42,53 @@ export default function Home() {
       </div>
       <div className="direct">
         <h1><Icon.FaCircle className="direct-dot-animated" style={{ color: colors.red, verticalAlign: "middle" }} /> Notre aventure en direct</h1>
-        <div className="cards-container">
-          <StepCard
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div style={{ width: '50%' }}>
+            <h1><Icon.FaMapPin style={{ color: colors.green, verticalAlign: 'middle' }} /> Etape en cours</h1>
+            <div>
+              {
+                steps.length > 0 ?
+                  <StepCard
+                    type={steps[0].type}
+                    title={steps[0].title}
+                    place={steps[0]?.place}
+                    date={steps[0].date}
+                    endDate={steps[0].endDate}
+                    distance={steps[0].distance}
+                    totalDistance={steps[0].totalDistance}
+                    endPlace={steps[0].endPlace}
+                  />
+                  :
+                  <p>Chargement...</p>
+              }
+            </div>
+          </div>
+          <div style={{ width: '50%' }}>
+            <h1><Icon.FaMapSigns style={{ color: colors.green, verticalAlign: 'middle' }} /> Prochaine étape</h1>
+            <div>
+              {
+                steps.length > 1 ?
+                  <StepCard
+                    type={steps[1].type}
+                    title={steps[1].title}
+                    place={steps[1].place}
+                    date={steps[1].date}
+                    endDate={steps[1].endDate}
+                    distance={steps[1].distance}
+                    totalDistance={steps[1].totalDistance}
+                    endPlace={steps[1].endPlace}
+                  />
+                  :
+                  <p>Chargement...</p>
+              }
+            </div>
+          </div>
+        </div>
+
+
+
+        {/* <div className="cards-container"> */}
+        {/* <StepCard
             stepIcon={<Icon.FaMapPin style={{ color: colors.green, verticalAlign: 'middle' }} />}
             title="étape en cours"
             startPlace={steps[0]?.startPlace}
@@ -62,9 +108,9 @@ export default function Home() {
             endStep={{ title: steps[2]?.title, date: moment(steps[2]?.date).format("DD MMMM") }}
             stepDistance={steps[1]?.stepDistance}
             totalDistance={steps[0]?.totalDistance}
-          />
+          /> */}
 
-          {/* {
+        {/* {
             steps.length !== 0 && steps.map((step, index) => {
               return (
                 index > 1 &&
@@ -82,11 +128,11 @@ export default function Home() {
             })
           } */}
 
-          {/* <a href='/' className="step-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '25vh', textDecoration: 'none', color: colors.black }}>
+        {/* <a href='/' className="step-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '25vh', textDecoration: 'none', color: colors.black }}>
             <p className="card-title">Voir le détail</p>
             <p><Icon.FaSearchPlus style={{ fontSize: '2rem' }} /></p>
           </a> */}
-        </div>
+        {/* </div> */}
       </div>
       <div className="content">
         <h1><Icon.FaRegNewspaper style={{ color: colors.green, verticalAlign: "middle" }} /> Nos dernières actualités</h1>
@@ -113,6 +159,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

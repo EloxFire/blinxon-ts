@@ -1,12 +1,45 @@
 @import '../globals.scss';
 
-.step-card {
+.card-activity {
   background-color: $white;
   border-radius: 20px;
   padding: 10px;
   border: 2px solid $green;
-  width: 30%;
-  min-height: 30vh;
+  width: 70%;
+  min-height: 25vh;
+  height: auto;
+  margin-right: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $mobileBreakpoint) {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+    color: $black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.card-travel {
+  background-color: $white;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid $green;
+  width: 70%;
+  min-height: 25vh;
   height: auto;
   margin-right: 5vw;
 
@@ -17,7 +50,7 @@
   }
 
   .card-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: $black;
     text-transform: uppercase;
     font-weight: bold;
@@ -122,6 +155,51 @@
           }
         }
       }
+    }
+  }
+}
+
+.card-info {
+  background-color: $white;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid $green;
+  width: 70%;
+  min-height: 25vh;
+  height: auto;
+  margin-right: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $mobileBreakpoint) {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    color: $black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .value {
+    font-size: 1.5rem;
+    color: $black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      font-size: 1.2rem;
     }
   }
 }

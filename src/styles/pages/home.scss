@@ -78,18 +78,18 @@
       }
     }
 
-    .cards-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      margin-top: 50px;
-      margin-bottom: 50px;
+    // .cards-container {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: flex-start;
+  //   align-items: center;
+  //   margin-top: 50px;
+  //   margin-bottom: 50px;
 
-      @media only screen and (max-width: $mobileBreakpoint) {
-        flex-direction: column;
-      }
-    }
+  //   @media only screen and (max-width: $mobileBreakpoint) {
+  //     flex-direction: column;
+  //   }
+  // }
   }
 
   .content {
