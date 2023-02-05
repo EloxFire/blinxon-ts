@@ -1,6 +1,6 @@
 @import '../globals.scss';
 
-#about{
+#about {
   min-height: 75vh;
   height: auto;
 
@@ -15,7 +15,7 @@
     z-index: 0;
 
     @media only screen and (max-width: $mobileBreakpoint) {
-      background-position: calc(50% + 50px) 50%;
+      background-position: calc(50% - 70px) 50%;
     }
 
     .title-container {
@@ -68,26 +68,38 @@
     }
   }
 
-  .content{
+  .content {
     padding-left: 5%;
     padding-right: 5%;
 
-    .about-us, .about-trophy, .about-edd{
+    .about-us,
+    .about-trophy,
+    .about-edd {
       margin-bottom: 10vh;
 
-      h1{
+      h1 {
         font-size: 2.5rem;
         text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 2vh;
+
+        @media only screen and (max-width: $mobileBreakpoint) {
+          font-size: 1.5rem;
+          text-align: center;
+        }
       }
 
-      p{
+      p {
         font-size: 1.2rem;
         line-height: 1.5;
+
+        @media only screen and (max-width: $mobileBreakpoint) {
+          font-size: 1rem;
+          text-align: justify;
+        }
       }
 
-      .image-container{
+      .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
