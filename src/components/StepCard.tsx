@@ -1,6 +1,4 @@
 import moment from 'moment'
-import { type } from 'os'
-import { ReactNode } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import '../styles/components/stepCard.scss'
 
