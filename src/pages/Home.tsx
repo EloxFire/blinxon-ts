@@ -45,8 +45,8 @@ export default function Home({ changeActive }: HomeProps) {
       </div>
       <div className="direct">
         <h1><Icon.FaCircle className="direct-dot-animated" style={{ color: colors.red, verticalAlign: "middle" }} /> Notre aventure en direct</h1>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <div style={{ width: '50%' }}>
+        <div className="cards-container">
+          <div className="container-part">
             <h1><Icon.FaMapPin style={{ color: colors.green, verticalAlign: 'middle' }} /> Etape en cours</h1>
             <div>
               {
@@ -66,7 +66,7 @@ export default function Home({ changeActive }: HomeProps) {
               }
             </div>
           </div>
-          <div style={{ width: '50%' }}>
+          <div className="container-part">
             <h1><Icon.FaMapSigns style={{ color: colors.green, verticalAlign: 'middle' }} /> Prochaine étape</h1>
             <div>
               {
