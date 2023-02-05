@@ -22,7 +22,7 @@ export default function Home({ changeActive }: HomeProps) {
     setSteps(accurateSteps)
     console.log(accurateSteps);
 
-  }, [])
+  }, [changeActive])
 
   const handleManualScroll = (direction: 'left' | 'right') => {
     const container = document.getElementById('news-posts-container')
