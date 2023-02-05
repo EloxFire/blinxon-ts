@@ -42,6 +42,9 @@
 
     @media only screen and (max-width: $mobileBreakpoint) {
       width: 80%;
+      display: flex;
+      justify-content: flex-end;
+      // background-color: red;
     }
 
     .navbar-menu {
@@ -52,6 +55,7 @@
 
       @media only screen and (max-width: $mobileBreakpoint) {
         justify-content: flex-end;
+        display: none;
       }
 
       .navbar-menu-item {
@@ -81,6 +85,76 @@
         }
       }
     }
+
+    .navbar-burger-menu{
+      display: none;
+      cursor: pointer;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        display: block;
+      }
+
+      .navbar-burger-menu-line{
+        width: 30px;
+        height: 3px;
+        background-color: $black;
+        margin: 5px 0;
+        transition: .4s;
+      }
+    }
+  }
+}
+
+#burger-menu-modal{
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .burger-links-item{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $black;
+    text-decoration: none;
+    transition: .3s;
+    list-style: none;
+    text-transform: uppercase;
+    padding: 5px 20px 5px 20px;
+    border-radius: 30px;
+    // margin: 20px 0;
+    text-align: center;
+
+    &:hover {
+      background-color: $green;
+    }
+
+    .burger-links-link{
+      text-decoration: none;
+      color: $black;
+      transition: .3s;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .burger-close-btn{
+    cursor: pointer;
+    text-decoration: none;
+    color: $red;
+    transition: .3s;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 20px 5px 20px;
   }
 }
 
