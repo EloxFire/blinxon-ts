@@ -60,39 +60,33 @@ export default function Navbar({ active }: NavbarProps) {
             <li className={`navbar-menu-item ${active === 1 && "active"}`}>
               <a href="/a-propos" className="navbar-menu-link">À propos</a>
             </li>
-            {/* <li className={`navbar-menu-item ${active === 2 && "active"}`}>
-            <a href="/trophy" className="navbar-menu-link">4L Trophy</a>
-          </li>
-          <li className={`navbar-menu-item ${active === 3 && "active"}`}>
-            <a href="/galerie" className="navbar-menu-link">Galerie</a>
-          </li>
-          <li className={`navbar-menu-item ${active === 4 && "active"}`}>
-            <a href="/contact" className="navbar-menu-link">Contact</a>
-          </li> */}
+            <li className={`navbar-menu-item ${active === 2 && "active"}`}>
+              <a href="/sponsors" className="navbar-menu-link">Nos sponsors</a>
+            </li>
+            <li className={`navbar-menu-item ${active === 3 && "active"}`}>
+              <a href="/raid" className="navbar-menu-link">Le raid</a>
+            </li>
           </ul>
           <div onClick={() => handleOpenBurger()} className="navbar-burger">
             <Icon.FaBars style={{ fontSize: '1.5rem', verticalAlign: 'middle' }} />
           </div>
         </div>
       </nav>
-      <div id="burger-modal" className="burger-modal">
-        <ul className="navbar-menu">
-          <li className={`navbar-menu-item ${active === 0 && "active"}`}>
-            <a href="/" className="navbar-menu-link">Accueil</a>
+      <div id="burger-modal" className='burger-modal'>
+        <ul className="burger-links">
+          <li className={`burger-links-item ${active === 0 && "active"}`}>
+            <a href="/" className="burger-links-link">Accueil</a>
           </li>
-          <li className={`navbar-menu-item ${active === 1 && "active"}`}>
-            <a href="/a-propos" className="navbar-menu-link">À propos</a>
+          <li className={`burger-links-item ${active === 1 && "active"}`}>
+            <a href="/a-propos" className="burger-links-link">À propos</a>
           </li>
-          {/* <li className={`navbar-menu-item ${active === 2 && "active"}`}>
-            <a href="/trophy" className="navbar-menu-link">4L Trophy</a>
+          <li className={`burger-links-item ${active === 2 && "active"}`}>
+            <a href="/a-propos" className="burger-links-link">Nos sponsors</a>
           </li>
-          <li className={`navbar-menu-item ${active === 3 && "active"}`}>
-            <a href="/galerie" className="navbar-menu-link">Galerie</a>
+          <li className={`burger-links-item ${active === 3 && "active"}`}>
+            <a href="/raid" className="burger-links-link">Le raid</a>
           </li>
-          <li className={`navbar-menu-item ${active === 4 && "active"}`}>
-            <a href="/contact" className="navbar-menu-link">Contact</a>
-          </li> */}
-          <p className="burger-close-btn" onClick={() => handleCloseBurger()}>Fermer</p>
+          <p onClick={() => handleCloseBurger()} className="burger-close-btn">Fermer</p>
         </ul>
       </div>
     </>
