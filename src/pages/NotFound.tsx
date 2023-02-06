@@ -1,10 +1,20 @@
+import { useEffect } from 'react'
 import '../styles/pages/notFound.scss'
 
-export default function NotFound() {
+interface NotFoundProps {
+  changeActive: (active: number) => void
+}
 
-  document.title = "Page introuvable - Blinxon"
+export default function NotFound({ changeActive }: NotFoundProps) {
 
-  document.getElementById('navbar')?.classList.add('navbar-active')
+  useEffect(() => {
+    document.title = "Page introuvable - Blinxon"
+    document.getElementById('navbar')?.classList.add('navbar-active')
+  }, [])
+
+  useEffect(() => {
+    changeActive(-1)
+  }, [changeActive])
 
   return (
     <div id="notFound">

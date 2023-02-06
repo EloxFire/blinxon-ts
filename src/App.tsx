@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home changeActive={setActive} />} />
         <Route path="/a-propos" element={<About changeActive={setActive} />} />
         <Route path="/raid" element={<Raid changeActive={setActive} />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound changeActive={setActive} />} />
       </Switch>
       <Footer />
     </Router>

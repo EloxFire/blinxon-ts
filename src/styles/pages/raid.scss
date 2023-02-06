@@ -1,0 +1,104 @@
+@import '../globals.scss';
+
+#raid {
+  min-height: 75vh;
+  height: auto;
+
+  .header {
+    height: 60vh;
+    background-image: url('../../img/raid_header_image.min.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $white;
+    position: relative;
+    z-index: 0;
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      background-position: calc(50% - 70px) 50%;
+    }
+
+    .title-container {
+      position: absolute;
+      bottom: 50px;
+      left: 5%;
+      backdrop-filter: blur(3px);
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 20px;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+      }
+
+      h1 {
+        font-size: 6rem;
+        color: $white;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        @media only screen and (max-width: $mobileBreakpoint) {
+          font-size: 2.8rem;
+          text-align: center;
+        }
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 3rem;
+        color: $white;
+        margin: 0;
+        margin-top: -8px;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px;
+
+        @media only screen and (max-width: $mobileBreakpoint) {
+          font-size: 1.5rem;
+          text-align: center;
+          -webkit-text-stroke: 1px;
+          margin-top: 0px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  .content {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 10vh;
+
+    h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 2vh;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        font-size: 1rem;
+        text-align: justify;
+      }
+    }
+
+    .steps-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
