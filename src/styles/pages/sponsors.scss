@@ -15,7 +15,7 @@
     z-index: 0;
 
     @media only screen and (max-width: $mobileBreakpoint) {
-      background-position: calc(50% - 70px) 50%;
+      background-position: calc(50%) 50%;
     }
 
     .title-container {
@@ -53,7 +53,7 @@
         margin: 0;
         margin-top: -8px;
         text-transform: uppercase;
-        letter-spacing: 7px;
+        letter-spacing: 34px;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 2px;
 
@@ -85,6 +85,18 @@
       }
     }
 
+    h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 2vh;
+
+      // @media only screen and (max-width: $mobileBreakpoint) {
+      //   font-size: .8rem;
+      //   // text-align: center;
+      // }
+    }
+
     p {
       font-size: 1.2rem;
       line-height: 1.5;
@@ -95,10 +107,36 @@
       }
     }
 
-    .steps-container {
+    a{
+      color: $green;
+    }
+
+    .sponsors-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-direction: column;
+      padding-left: 15%;
+      padding-right: 15%;
+      margin-top: 10vh;
+
+      .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5vh;
+
+        @media only screen and (max-width: $mobileBreakpoint) {
+          flex-direction: column;
+
+        }
+
+        img{
+          max-height: 12vh;
+
+          @media only screen and (max-width: $mobileBreakpoint) {
+            margin-bottom: 5vh;
+          }
+        }
+      }
     }
   }
 }
