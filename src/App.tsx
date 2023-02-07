@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes as Switch, Route } from "react-router-d
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from './pages/About';
+import Contact from './pages/Contact';
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Raid from './pages/Raid';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/a-propos" element={<About changeActive={setActive} />} />
         <Route path="/raid" element={<Raid changeActive={setActive} />} />
         <Route path="/sponsors" element={<Sponsors changeActive={setActive} />} />
+        <Route path="/contact" element={<Contact changeActive={setActive} />} />
         <Route path="*" element={<NotFound changeActive={setActive} />} />
       </Switch>
       <Footer />

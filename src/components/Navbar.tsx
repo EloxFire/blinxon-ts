@@ -66,6 +66,9 @@ export default function Navbar({ active }: NavbarProps) {
             <li className={`navbar-menu-item ${active === 3 && "active"}`}>
               <a href="/raid" className="navbar-menu-link">Le raid</a>
             </li>
+            <li className={`navbar-menu-item ${active === 4 && "active"}`}>
+              <a href="/contact" className="navbar-menu-link">Nos réseaux</a>
+            </li>
           </ul>
           <div onClick={() => handleOpenBurger()} className="navbar-burger">
             <Icon.FaBars style={{ fontSize: '1.5rem', verticalAlign: 'middle' }} />
@@ -85,6 +88,9 @@ export default function Navbar({ active }: NavbarProps) {
           </li>
           <li className={`burger-links-item ${active === 3 && "active"}`}>
             <a href="/raid" className="burger-links-link">Le raid</a>
+          </li>
+          <li className={`burger-links-item ${active === 4 && "active"}`}>
+            <a href="/contact" className="burger-links-link">Nos réseaux</a>
           </li>
           <p onClick={() => handleCloseBurger()} className="burger-close-btn">Fermer</p>
         </ul>
