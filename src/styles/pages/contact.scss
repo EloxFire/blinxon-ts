@@ -94,4 +94,80 @@
       }
     }
   }
+
+  .socials-container{
+    margin-bottom: 15vh;
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      text-align: center;
+    }
+  }
+
+  .contact-form-container{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+    form{
+      width: 50%;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        width: 100%;
+      }
+
+      .form-group{
+        margin-bottom: 2vh;
+        display: flex;
+        flex-direction: column;
+
+        label{
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: 0.5vh;
+        }
+
+        input, textarea{
+          padding: 1vh;
+          border: 1px solid $black;
+          border-radius: 5px;
+          font-size: 1.2rem;
+        }
+      }
+
+      .submit-btn{
+        background-color: $green;
+        color: $white;
+        padding: 1vh;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+          background-color: $white;
+          color: $black;
+          outline: 1px solid $black;
+        }
+      }
+    }
+  }
+
+  .error-message{
+    color: $red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2vh;
+  }
+
+  .success-message{
+    color: $green;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2vh;
+  }
+
+  .required{
+    color: $red;
+  }
 }
