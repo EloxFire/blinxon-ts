@@ -38,7 +38,8 @@
   }
 
   .navbar-right {
-    width: 60%;
+    width: 80%;
+    // background-color: red;
 
     @media only screen and (max-width: $mobileBreakpoint) {
       width: 80%;
@@ -63,12 +64,21 @@
         font-weight: bold;
         color: $black;
         text-decoration: none;
-        transition: all 0.3s ease-in-out;
+        // transition: all 0.3s ease-in-out;
         list-style: none;
         text-transform: uppercase;
         padding: 5px 20px 5px 20px;
         border-radius: 30px;
         margin-left: 20px;
+        // background-color: blue;
+
+        @media only screen and (max-width: 1700px) {
+          font-size: 1rem;
+        }
+
+        @media only screen and (max-width: 1230px) {
+          text-align: center;
+        }
 
         &:hover {
           background-color: $green;
@@ -78,6 +88,7 @@
           text-decoration: none;
           color: $black;
           transition: .3s;
+          // background-color: green;
 
           &:hover {
             color: $white;
@@ -97,6 +108,7 @@
 }
 
 .burger-modal {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -110,10 +122,10 @@
   align-items: center;
   transition: .3s;
 
-  .navbar-menu {
+  .burger-links {
     padding-left: 0;
 
-    .navbar-menu-item {
+    .burger-links-item {
       font-size: 1.5rem;
       font-weight: bold;
       color: $black;
@@ -130,7 +142,7 @@
         background-color: $green;
       }
 
-      .navbar-menu-link {
+      .burger-links-link {
         text-decoration: none;
         color: $black;
         transition: .3s;
@@ -156,6 +168,10 @@
   background-color: $green;
 
   .navbar-menu-link {
+    color: $white !important;
+  }
+
+  .burger-links-link {
     color: $white !important;
   }
 }
