@@ -206,6 +206,7 @@ export const tripSteps: { type: 'activity' | 'travel' | 'info', title: string, d
 ]
 
 export const news: string[] = [
+  "https://www.instagram.com/p/CohzndTtPKr/?utm_source=ig_web_copy_link",
   "https://www.instagram.com/p/CoMqFhuNikS/?utm_source=ig_web_copy_link",
   "https://www.instagram.com/p/CoKcKnXtmby/?utm_source=ig_web_copy_link",
   "https://www.instagram.com/p/CoEvqHTtR-P/?utm_source=ig_web_copy_link",
