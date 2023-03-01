@@ -5,7 +5,7 @@ export const colors = {
   black: '#000000',
 }
 
-export const tripSteps: { type: 'activity' | 'travel' | 'info', title: string, date: Date, endDate: Date, place: string, endPlace?: string, distance?: number, totalDistance?: number }[] = [
+export const tripSteps: { type: 'activity' | 'travel' | 'info' | 'card', title: string, date: Date, endDate: Date, place: string, endPlace?: string, distance?: number, totalDistance?: number }[] = [
   {
     type: 'activity',
     title: "Préparation finale",
@@ -202,10 +202,20 @@ export const tripSteps: { type: 'activity' | 'travel' | 'info', title: string, d
     place: "Aix-en-Provence",
     date: new Date('2023-02-28T17:00:00'),
     endDate: new Date('2100-02-28T17:00:00'),
+  },
+  {
+    type: 'card',
+    title: "Réinscription pour 2025 ???",
+    place: "Oui, on aimerait déjà repartir !",
+    date: new Date('2023-02-28T17:00:00'),
+    endDate: new Date('2100-02-28T17:00:00'),
   }
 ]
 
 export const news: string[] = [
+  "https://www.instagram.com/p/Co1mcRzoAwf/?utm_source=ig_web_copy_link",
+  "https://www.instagram.com/p/Co1ltL1Ig_T/?utm_source=ig_web_copy_link",
+  "https://www.instagram.com/p/CosTXtEohST/?utm_source=ig_web_copy_link",
   "https://www.instagram.com/p/CohzndTtPKr/?utm_source=ig_web_copy_link",
   "https://www.instagram.com/p/CoMqFhuNikS/?utm_source=ig_web_copy_link",
   "https://www.instagram.com/p/CoKcKnXtmby/?utm_source=ig_web_copy_link",

@@ -13,7 +13,7 @@ interface HomeProps {
 
 export default function Home({ changeActive }: HomeProps) {
 
-  const [steps, setSteps] = useState<{ type: 'activity' | 'travel' | 'info', title: string, date: Date, endDate: Date, place: string, endPlace?: string, distance?: number, totalDistance?: number }[]>([])
+  const [steps, setSteps] = useState<{ type: 'activity' | 'travel' | 'info' | 'card', title: string, date: Date, endDate: Date, place: string, endPlace?: string, distance?: number, totalDistance?: number }[]>([])
 
   useEffect(() => {
     changeActive(0)

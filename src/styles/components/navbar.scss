@@ -95,6 +95,79 @@
           }
         }
       }
+
+      /* Dropdown Button */
+      .navbar-menu-dropdown-button {
+        background-color: $white;
+        border: none;
+        color: $black;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 5px 20px 5px 20px;
+        border-radius: 20px;
+
+        &:hover{
+          background-color: $green;
+          color: $white;
+          border-radius: 20px 20px 0px 0px;
+        }
+      }
+
+      /* The container <div> - needed to position the dropdown content */
+      .navbar-menu-dropdown {
+        position: relative;
+        display: inline-block;
+
+        &:hover{
+          .navbar-menu-dropdown-content{
+            display: block;
+          }
+        }
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .navbar-menu-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        min-width: 210px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 0px 20px 20px 20px;
+
+        a{
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          font-weight: bold;
+          display: block;
+
+          &:first-child{
+            border-radius: 0px 20px 0px 0px;
+          }
+
+          &:last-child{
+            border-radius: 0px 0px 20px 20px;
+          }
+
+          &:hover{
+            background-color: $green;
+            color: $white;
+          }
+        }
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {background-color: #ddd;}
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {display: block;}
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
     }
 
     .navbar-burger {

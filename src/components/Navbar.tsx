@@ -63,9 +63,13 @@ export default function Navbar({ active }: NavbarProps) {
             <li className={`navbar-menu-item ${active === 2 && "active"}`}>
               <a href="/sponsors" className="navbar-menu-link">Nos sponsors</a>
             </li>
-            <li className={`navbar-menu-item ${active === 3 && "active"}`}>
-              <a href="/raid" className="navbar-menu-link">Le raid</a>
-            </li>
+            <div className="navbar-menu-dropdown">
+              <button className="navbar-menu-dropdown-button">Le raid</button>
+              <div className="navbar-menu-dropdown-content">
+                <a href="/raid">Informations</a>
+                <a href="/gallery">Galerie photos</a>
+              </div>
+            </div>
             <li className={`navbar-menu-item ${active === 4 && "active"}`}>
               <a href="/contact" className="navbar-menu-link">Nos réseaux</a>
             </li>

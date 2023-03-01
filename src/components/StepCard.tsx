@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa'
 import '../styles/components/stepCard.scss'
 
 interface StepCardProps {
-  type: 'info' | 'activity' | 'travel'
+  type: 'info' | 'activity' | 'travel' | 'card'
   title: string
   place: string
   endPlace?: string
@@ -58,6 +58,13 @@ export default function StepCard({ type, title, place, endPlace, date, endDate, 
             <p style={{ fontSize: '2.5rem', margin: 0, fontWeight: 'bold', marginLeft: '30px' }}>à</p>
             <p style={{ fontSize: '2.5rem', margin: 0, fontWeight: 'bold', marginLeft: '30px' }}>{moment(endDate).format("HH:mm").replace(':', 'h')}</p>
           </div>
+        </div>
+      }
+      {
+        type === 'card' &&
+        <div className="card-info">
+          <p className="title">{title}</p>
+          <p style={{ fontSize: '1.2rem' }}>{place}</p>
         </div>
       }
       {
