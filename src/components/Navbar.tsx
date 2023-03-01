@@ -67,7 +67,7 @@ export default function Navbar({ active }: NavbarProps) {
               <button className="navbar-menu-dropdown-button">Le raid</button>
               <div className="navbar-menu-dropdown-content">
                 <a href="/raid">Informations</a>
-                <a href="/gallery">Galerie photos</a>
+                <a href="/gallerie">Galerie photos</a>
               </div>
             </div>
             <li className={`navbar-menu-item ${active === 4 && "active"}`}>
