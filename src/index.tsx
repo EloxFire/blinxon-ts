@@ -5,8 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import moment from 'moment'
 import 'moment/locale/fr'
+import './firebase'
 moment.locale('fr');
-
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

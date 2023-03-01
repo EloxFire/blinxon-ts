@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Raid from './pages/Raid';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/raid" element={<Raid changeActive={setActive} />} />
         <Route path="/sponsors" element={<Sponsors changeActive={setActive} />} />
         <Route path="/contact" element={<Contact changeActive={setActive} />} />
+        <Route path="/gallerie" element={<Gallery />} />
         <Route path="*" element={<NotFound changeActive={setActive} />} />
       </Switch>
       <Footer />
