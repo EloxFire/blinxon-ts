@@ -19,7 +19,7 @@ export default function Gallery() {
     setCurrentFilter(0)
     const storages = ['village-depart', 'espagne', 'algeciras-rabat', 'rabat-boulajoul', 'boulajoul-merzouga', 'boucle-erg-chebbi', 'boucle-oued-ziz', 'etape-marathon']
     // Get all files from storages
-    // const tempImages: { url: string, name: string, filter: number }[] = [];
+    const tempImages: { url: string, name: string, filter: number }[] = [];
 
     storages.forEach((storageId, index) => {
       const listRef = ref(storage, storageId);
@@ -30,8 +30,8 @@ export default function Gallery() {
           getDownloadURL(itemRef)
             .then((url) => {
               const image = { url: url, name: itemRef.name, filter: index + 1 }
-              // tempImages.push(image)
-              setImages(images => [...images, image])
+              tempImages.push(image)
+              setImages(tempImages)
 
 
             })
